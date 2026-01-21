@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تطبيقي الرائع</title>
+    <title>تطبيقي التفاعلي</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>مرحبا بك في تطبيقي</h1>
+            <h1>مرحبا بك في تطبيقي التفاعلي</h1>
             <nav>
                 <ul>
                     <li><a href="#home">الرئيسية</a></li>
                     <li><a href="#features">المميزات</a></li>
-                    <li><a href="#contact">تواصل معنا</a></li>
+                    <li><a href="#interactive">تفاعل</a></li>
                 </ul>
             </nav>
         </div>
@@ -23,7 +23,7 @@
     <section id="home">
         <div class="container">
             <h2>الرئيسية</h2>
-            <p>هذا تطبيق مرتب وقوي وجاهز للعمل مباشرة على GitHub Pages بدون أي أخطاء. يمكنك التعديل عليه لاحقًا بسهولة.</p>
+            <p>هنا الصفحة الرئيسية لتطبيقك التفاعلي. كل شيء جاهز لتجربة المستخدم.</p>
         </div>
     </section>
 
@@ -39,10 +39,12 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="interactive">
         <div class="container">
-            <h2>تواصل معنا</h2>
-            <p>لأي استفسار يمكنك مراسلتنا عبر البريد الإلكتروني: <a href="mailto:example@example.com">example@example.com</a></p>
+            <h2>قسم التفاعل</h2>
+            <p>اضغطي الزر وشوفي النتيجة!</p>
+            <button id="magicBtn">اضغط هنا</button>
+            <p id="output" style="margin-top:15px; font-weight:bold;"></p>
         </div>
     </section>
 
@@ -51,5 +53,21 @@
             <p>&copy; 2026 جلالتك - كل الحقوق محفوظة</p>
         </div>
     </footer>
+
+    <script>
+        const btn = document.getElementById('magicBtn');
+        const output = document.getElementById('output');
+
+        btn.addEventListener('click', () => {
+            const messages = [
+                'مرحبا بك! ✨',
+                'أنتِ قوية ورائعة! 💖',
+                'جربي أي شيء تريديه هنا! 🚀',
+                'هذا تطبيقك التفاعلي الأول! 🎉'
+            ];
+            const random = messages[Math.floor(Math.random() * messages.length)];
+            output.textContent = random;
+        });
+    </script>
 </body>
 </html>
